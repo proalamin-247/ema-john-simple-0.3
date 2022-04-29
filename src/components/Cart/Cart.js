@@ -3,7 +3,6 @@ import './Cart.css'
 
 const Cart = (props) => {
     const {cart} = props;
-    console.log(props)
 
     // console.log(cart);
     
