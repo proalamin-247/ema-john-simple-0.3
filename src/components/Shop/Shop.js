@@ -15,11 +15,11 @@ const Shop = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/product?page=${page}$size=${size}`;
+        const url = `http://localhost:5000/product?page=${page}&size=${size}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data));
-    }, []);
+    }, [page, size]);
 
     useEffect(() => {
         fetch('http://localhost:5000/productCount')
